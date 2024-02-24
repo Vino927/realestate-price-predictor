@@ -100,10 +100,6 @@ To run this project, you will need Python 3.6 or later. It is recommended to use
 
 ### Clone the repository to your local machine:
 ```
-bash
-```
-### Copy code
-```
 [git clone https://your-repository-url.git](https://github.com/Vino927/re-price-predictor.git)
 ```
 
@@ -113,7 +109,7 @@ pip install -r requirements.txt
 ```
 
 ### Running the Project
-To generate a specific fractal, run the `main.py` script with Python:
+Run the `main.py` script with Python:
 ```
 python main.py
 ```

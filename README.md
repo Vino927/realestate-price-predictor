@@ -38,11 +38,11 @@ model = Sequential([
             Dense(1, activation='linear')  # Output layer for predicting a continuous value
 
 #### Results:
-`RMSE` = 124816.16 
-`MSE` = 15579073709.679752 
-`MAE` = 79025.3324009364 
-`R2` = 0.8918900279599247 
-`Adjusted R2` = 0.8918728075120049
+- `RMSE` = 124816.16 
+- `MSE` = 15579073709.679752 
+- `MAE` = 79025.3324009364 
+- `R2` = 0.8918900279599247 
+- `Adjusted R2` = 0.8918728075120049
 
 ![Initial Model Loss](model_loss_Adamno_clip_4layers_nonLearningrateschedular.png "Initial Model Loss")
 
@@ -52,11 +52,11 @@ While the hight R2 suggests suggests the model is quite effective,  the absolute
  I used Adam(clipvalue=0.5) clipping for the Adam optimizer, setting the clipvalue to 0.5 in order to prevent the model's gradients from growing too large and achieving smoother training and more stable convergence.
 
 #### Results:
-`RMSE` = 122652.968 
-`MSE` = 15043750519.464321 
-`MAE` = 77944.16190759506 
-`R2` = 0.8959362635873276 
-`Adjusted R2` = 0.8959196876497021
+- `RMSE` = 122652.968 
+- `MSE` = 15043750519.464321 
+- `MAE` = 77944.16190759506 
+- `R2` = 0.8959362635873276 
+- `Adjusted R2` = 0.8959196876497021
 
 ![Model Loss with Gradient Clipping](model_loss_ma_only_4layers_NOlrschedule.png "Model Loss with Gradient Clipping")
 
@@ -66,11 +66,11 @@ Improvement in the metrics so tried a other ideas
 I expanded the model's architecture by adding a fourth hidden layer of 200 neurons to see if it improved performance without overfitting the data. 
 
 #### Results:
-`RMSE` = 116160.824 
-`MSE` = 13493337133.553907 
-`MA`E = 71245.49577912228 
-`R2` = 0.9071932068691727 
-`Adjusted R2` = 0.9071784240094832
+- `RMSE` = 116160.824 
+- `MSE` = 13493337133.553907 
+- `MA`E = 71245.49577912228 
+- `R2` = 0.9071932068691727 
+- `Adjusted R2` = 0.9071784240094832
 
 ![Model Loss with added hidden layer](model_loss_ma_only_5 layersNOlrschedule.png "Model Loss with added hidden layer")
 
@@ -81,11 +81,11 @@ Adding the 4th hidden layer had an impact, further improving R2 and decreasing t
 I implemented a learning rate scheduler that started with a higher learning rate of .001 which stayed constant for the first 50 epochs and then expoentially lowered allowing the model to fine-tune its weights with more precision. 
 
 #### Results:
-`RMSE` = 89007.439 
-`MSE` = 7922324235.318464 
-`MAE` = 42253.78487972941 
-`R2` = 0.9455342138231086 
-`Adjusted R2` = 0.945525538164272
+- `RMSE` = 89007.439 
+- `MSE` = 7922324235.318464 
+- `MAE` = 42253.78487972941 
+- `R2` = 0.9455342138231086 
+- `Adjusted R2` = 0.945525538164272
 
 ![Model Loss with Learning Rate scheduler](model_loss_ma_only_5layerslrschedule.png "Model Loss with Learning Rate scheduler")
 Adding the Learning Rate scheduler seemed to cause the biggest jump in performance and the smoothest curve with the final R2 of .94. A good stopping point. A larger dataset and more features could definitely improve the performance of this model.

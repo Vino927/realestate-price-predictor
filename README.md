@@ -121,10 +121,10 @@ python main.py
 ## Usage
 To use the project, you must follow these steps sequentially:
 
-Data Preprocessing: Load and preprocess your dataset using DataPreprocessor.
-Feature Scaling: Scale your features and target variable with FeatureScaler.
-Model Training: Train the real estate price prediction model using RealEstatePricePredictor.
-Model Evaluation: Evaluate the model's performance and visualize the results using ModelEvaluator.
+- Data Preprocessing: Load and preprocess your dataset using DataPreprocessor.
+- Feature Scaling: Scale your features and target variable with FeatureScaler.
+- Model Training: Train the real estate price prediction model using RealEstatePricePredictor.
+- Model Evaluation: Evaluate the model's performance and visualize the results using ModelEvaluator.
 
 
 ## License

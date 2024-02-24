@@ -11,6 +11,8 @@ Original dataset: `https://www.kaggle.com/datasets/ahmedshahriarsakib/usa-real-e
 3. Missing values for bed, bath, house_size and acreage were filled in with the first mode value
 4. Rows with the top and bottom 25th percentile of outliers for each column were removed
 
+MA only data: `realtor_ma_only.csv`
+
 ## Project Structure
 The project is divided into the following modules:
 

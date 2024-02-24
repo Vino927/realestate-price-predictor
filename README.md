@@ -61,7 +61,7 @@ Added clipping for the Adam optimizer, setting the clipvalue to 0.5 in order to 
 
 ![Model Loss with Gradient Clipping](model_loss_ma_only_4layers_NOlrschedule.png "Model Loss with Gradient Clipping")
 
-Improvement in the metrics so tried a other ideas
+Improvement in the metrics so tried other ideas
 
 ### Improvement 2: Expanding the Model
 Expanded the model's architecture by adding a fourth hidden layer of 200 neurons to see if it improved performance without overfitting the data. 

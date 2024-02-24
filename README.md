@@ -30,13 +30,14 @@ In the exploratory state, using Colab notebooks tried various performance improv
 - The five input features were bed, bath, acreage, zipcode and house_size
 
 - The model used has an input layer of  100 neurons, 3 hidden layers of 100, 100 and 200 neurons all useing the ReLU (Rectified Linear Unit) activation function. The final output layer has a single linear activation function.
-model = Sequential([
-            Dense(100, input_dim=5, activation='relu'),  # Input layer with 5 inputs
-            Dense(100, activation='relu'),  # Hidden layer
-            Dense(100, activation='relu'),  # Hidden layer
-            Dense(200, activation='relu'),  # Hidden layer
-            Dense(1, activation='linear')  # Output layer for predicting a continuous value
-
+```
+            model = Sequential([
+                        Dense(100, input_dim=5, activation='relu'),  # Input layer with 5 inputs
+                        Dense(100, activation='relu'),  # Hidden layer
+                        Dense(100, activation='relu'),  # Hidden layer
+                        Dense(200, activation='relu'),  # Hidden layer
+                        Dense(1, activation='linear')  # Output layer for predicting a continuous value
+            ```
 #### Results:
 - `RMSE` = 124816.16 
 - `MSE` = 15579073709.679752 

@@ -47,10 +47,10 @@ In the exploratory state, using Colab notebooks tried various performance improv
 
 ![Initial Model Loss](model_loss_Adamno_clip_4layers_nonLearningrateschedular.png "Initial Model Loss")
 
-While the hight R2 suggests suggests the model is quite effective,  the absolute error metrics (RMSE, MSE, MAE) are large, giving us room for improvement. 
+While the higher R2 suggests the model is effective,  the absolute error metrics (RMSE, MSE, MAE) are large, giving us room for improvement. 
             
 ### Improvement 1: Gradient Clipping for Adam optimizer
- I used Adam(clipvalue=0.5) clipping for the Adam optimizer, setting the clipvalue to 0.5 in order to prevent the model's gradients from growing too large and achieving smoother training and more stable convergence.
+Added clipping for the Adam optimizer, setting the clipvalue to 0.5 in order to prevent the model's gradients from growing too large and achieving smoother training and more stable convergence.
 
 #### Results:
 - `RMSE` = 122652.968 
@@ -64,7 +64,7 @@ While the hight R2 suggests suggests the model is quite effective,  the absolute
 Improvement in the metrics so tried a other ideas
 
 ### Improvement 2: Expanding the Model
-I expanded the model's architecture by adding a fourth hidden layer of 200 neurons to see if it improved performance without overfitting the data. 
+Expanded the model's architecture by adding a fourth hidden layer of 200 neurons to see if it improved performance without overfitting the data. 
 
 #### Results:
 - `RMSE` = 116160.824 
@@ -79,7 +79,7 @@ Adding the 4th hidden layer had an impact, further improving R2 and decreasing t
 
 
 ### Improvement 3: Dynamic Learning Rate
-I implemented a learning rate scheduler that started with a higher learning rate of .001 which stayed constant for the first 50 epochs and then expoentially lowered allowing the model to fine-tune its weights with more precision. 
+Implemented a learning rate scheduler that started with a higher learning rate of .001 which stayed constant for the first 50 epochs and then expoentially lowered allowing the model to fine-tune its weights with more precision. 
 
 #### Results:
 - `RMSE` = 89007.439 
@@ -89,7 +89,10 @@ I implemented a learning rate scheduler that started with a higher learning rate
 - `Adjusted R2` = 0.945525538164272
 
 ![Model Loss with Learning Rate scheduler](model_loss_ma_only_5layerslrschedule.png "Model Loss with Learning Rate scheduler")
-Adding the Learning Rate scheduler seemed to cause the biggest jump in performance and the smoothest curve with the final R2 of .94. A good stopping point. A larger dataset and more features could definitely improve the performance of this model.
+
+###Conclusion
+
+Each of the modifications had imporved performance with the addition of the Learning Rate scheduler seemingly causing the biggest jump in performance and the smoothest curve with the a final R2 of .94. A good stopping point. A larger dataset and more features could definitely improve the performance of this model.
 
 
 # Setup Instructions

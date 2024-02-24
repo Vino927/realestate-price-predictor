@@ -45,7 +45,7 @@ In the exploratory state, using Colab notebooks tried various performance improv
 - `R2` = 0.8918900279599247 
 - `Adjusted R2` = 0.8918728075120049
 
-![Initial Model Loss]images/model_loss_Adamno_clip_4layers_nonLearningrateschedular.png "Initial Model Loss")
+![Initial Model Loss](images/model_loss_Adamno_clip_4layers_nonLearningrateschedular.png "Initial Model Loss")
 
 While the higher R2 suggests the model is effective,  the absolute error metrics (RMSE, MSE, MAE) are large, giving us room for improvement. 
             

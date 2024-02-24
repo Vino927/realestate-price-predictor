@@ -37,7 +37,7 @@ In the exploratory state, using Colab notebooks tried various performance improv
                         Dense(100, activation='relu'),  # Hidden layer
                         Dense(200, activation='relu'),  # Hidden layer
                         Dense(1, activation='linear')  # Output layer for predicting a continuous value
-            ```
+```
 #### Results:
 - `RMSE` = 124816.16 
 - `MSE` = 15579073709.679752 

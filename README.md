@@ -90,7 +90,7 @@ Implemented a learning rate scheduler that started with a higher learning rate o
 
 ![Model Loss with Learning Rate scheduler](images/model_loss_ma_only_5layerslrschedule.png "Model Loss with Learning Rate scheduler")
 
-###Conclusion
+### Conclusion
 
 Each of the modifications had imporved performance with the addition of the Learning Rate scheduler seemingly causing the biggest jump in performance and the smoothest curve with the a final R2 of .94. A good stopping point. A larger dataset and more features could definitely improve the performance of this model.
 

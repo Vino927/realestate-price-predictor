@@ -59,7 +59,7 @@ Added clipping for the Adam optimizer, setting the clipvalue to 0.5 in order to 
 - `R2` = 0.8959362635873276 
 - `Adjusted R2` = 0.8959196876497021
 
-![Model Loss with Gradient Clipping](model_loss_ma_only_4layers_NOlrschedule.png "Model Loss with Gradient Clipping")
+![Model Loss with Gradient Clipping](images/model_loss_ma_only_4layers_NOlrschedule.png "Model Loss with Gradient Clipping")
 
 Improvement in the metrics so tried other ideas
 
@@ -73,7 +73,7 @@ Expanded the model's architecture by adding a fourth hidden layer of 200 neurons
 - `R2` = 0.9071932068691727 
 - `Adjusted R2` = 0.9071784240094832
 
-![Model Loss with added hidden layer](model_loss_ma_only_5 layersNOlrschedule.png "Model Loss with added hidden layer")
+![Model Loss with added hidden layer](images/model_loss_ma_only_5 layersNOlrschedule.png "Model Loss with added hidden layer")
 
 Adding the 4th hidden layer had an impact, further improving R2 and decreasing the error metrics.
 
@@ -88,7 +88,7 @@ Implemented a learning rate scheduler that started with a higher learning rate o
 - `R2` = 0.9455342138231086 
 - `Adjusted R2` = 0.945525538164272
 
-![Model Loss with Learning Rate scheduler](model_loss_ma_only_5layerslrschedule.png "Model Loss with Learning Rate scheduler")
+![Model Loss with Learning Rate scheduler](images/model_loss_ma_only_5layerslrschedule.png "Model Loss with Learning Rate scheduler")
 
 ###Conclusion
 

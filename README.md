@@ -1,6 +1,6 @@
 # re-price-predictor
 
-Real Estate Price Prediction Project
+## Real Estate Price Prediction Project
 This Real Estate Price Prediction project is designed to predict the prices of real estate properties based on various features such as the number of bedrooms, bathrooms, lot size, zip code, and house size. The project is structured into modular components for ease of understanding and maintenance.
 
 ## Data

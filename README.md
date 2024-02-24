@@ -1,7 +1,7 @@
 # re-price-predictor
 
 ## Real Estate Price Prediction Project
-This Real Estate Price Prediction project is designed to predict the prices of real estate properties based on various features such as the number of bedrooms, bathrooms, lot size, zip code, and house size. The project is structured into modular components for ease of understanding and maintenance.
+This Real Estate Price Prediction project is designed to predict the prices of properties in the state of Massachussetts based on  features such as the number of bedrooms, bathrooms, lot size, zip code, and house size.
 
 ## Data
 Original dataset: `https://www.kaggle.com/datasets/ahmedshahriarsakib/usa-real-estate-dataset`

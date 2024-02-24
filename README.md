@@ -16,11 +16,11 @@ MA only data: `realtor_ma_only.csv`
 ## Project Structure
 The project is divided into the following modules:
 
-`dataloader.py`: Handles data loading, cleaning, and preprocessing.
-`featurescaling.py`: Scales the features and target variable for neural network input.
-`predictor.py`: Builds and trains the neural network model for price prediction.
-`evaluator.py`: Evaluates the model's performance and visualizes the prediction results.
-`main.py`: Loads datafile for processing, selects features for training and scaling, creates the model,  evaluates the performance and plots the evaluation
+- `dataloader.py`: Handles data loading, cleaning, and preprocessing.
+- `featurescaling.py`: Scales the features and target variable for neural network input.
+- `predictor.py`: Builds and trains the neural network model for price prediction.
+- `evaluator.py`: Evaluates the model's performance and visualizes the prediction results.
+- `main.py`: Loads datafile for processing, selects features for training and scaling, creates the model,  evaluates the performance and plots the evaluation
 
 ## Iterative Improvements and Their Impact
 ### Initial Setup

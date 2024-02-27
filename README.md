@@ -73,7 +73,7 @@ Expanded the model's architecture by adding a fourth hidden layer of 200 neurons
 - `R2` = 0.9071932068691727 
 - `Adjusted R2` = 0.9071784240094832
 
-![Model Loss with added hidden layer](images/model_loss_ma_only_5 layersNOlrschedule.png "Model Loss with added hidden layer")
+![Model Loss with added hidden layer](images/model_loss_ma_only_5layersNOlrschedule.png "Model Loss with added hidden layer")
 
 Adding the 4th hidden layer had an impact, further improving R2 and decreasing the error metrics.
 

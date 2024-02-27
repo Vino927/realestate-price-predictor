@@ -1,52 +1,50 @@
+import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.callbacks import LearningRateScheduler
-import tensorflow as tf
 
 class RealEstatePricePredictor:
-    def __init__(self):
-        # Initialize the model upon creation of an instance of RealEstatePricePredictor
+    def __init__(self, input_dim=5, layers=[100, 100, 100, 200, 200], activation='relu', final_activation='linear', optimizer='adam', clipvalue=0.5, initial_lr=0.001):
+        self.input_dim = input_dim
+        self.layers = layers
+        self.activation = activation
+        self.final_activation = final_activation
+        self.optimizer = optimizer
+        self.clipvalue = clipvalue
+        self.initial_lr = initial_lr
         print("Initializing the real estate price predictor model...")
         self.model = self._build_model()
 
     def _build_model(self):
-        # Private method to build a Sequential neural network model
         print("Building the model...")
-        model = Sequential([
-            Dense(100, input_dim=5, activation='relu'),
-            Dense(100, activation='relu'),
-            Dense(100, activation='relu'),
-            Dense(200, activation='relu'),
-            Dense(200, activation='relu'),
-            Dense(1, activation='linear')
-        ])
-
-        # Use Adam optimizer with gradient clipping
-        optimizer = tf.keras.optimizers.Adam(clipvalue=0.5)
-
-        # Compile the model
+        model = Sequential()
+        model.add(Dense(self.layers[0], input_dim=self.input_dim, activation=self.activation))
+        for layer_size in self.layers[1:]:
+            model.add(Dense(layer_size, activation=self.activation))
+        model.add(Dense(1, activation=self.final_activation))
+        
+        if self.optimizer == 'adam':
+            optimizer = tf.keras.optimizers.Adam(clipvalue=self.clipvalue, learning_rate=self.initial_lr)
+      
+        
         model.compile(optimizer=optimizer, loss='mean_squared_error')
         return model
 
     def scheduler(self, epoch, lr):
-        # Learning rate scheduler function to adjust the learning rate over epochs
         if epoch < 50:
-            return lr  # No change in learning rate for the first 50 epochs
+            return lr
         else:
-            adjusted_lr = lr * tf.math.exp(-0.1)  # Exponentially decay the learning rate
+            adjusted_lr = lr * tf.math.exp(-0.1)
             print(f"Adjusting learning rate to {adjusted_lr:.6f}.")
             return adjusted_lr
 
-    def train(self, X_train, y_train):
-        # Train the model on the training data
+    def train(self, X_train, y_train, epochs=100, batch_size=50, validation_split=0.2):
         print("Starting training...")
-        # Apply learning rate scheduler
         lr_schedule = LearningRateScheduler(self.scheduler)
-        history = self.model.fit(X_train, y_train, epochs=100, batch_size=50, validation_split=0.2, callbacks=[lr_schedule])
+        history = self.model.fit(X_train, y_train, epochs=epochs, batch_size=batch_size, validation_split=validation_split, callbacks=[lr_schedule])
         print("Training completed.")
         return history
 
     def predict(self, X):
-        # Predict the target values for a given input
         print("Making predictions...")
         return self.model.predict(X)

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from sklearn.preprocessing import MinMaxScaler
 
 class FeatureScaler:

@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python3
 from dataloader import DataPreprocessor
 from featurescaling import FeatureScaler
 from predictor import RealEstatePricePredictor

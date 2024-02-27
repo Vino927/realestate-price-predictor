@@ -1,6 +1,7 @@
+#!/usr/bin/env python3
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense
+from tensorflow.kas.layers import Dense
 from tensorflow.keras.callbacks import LearningRateScheduler
 
 class RealEstatePricePredictor:

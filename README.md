@@ -73,7 +73,7 @@ Expanded the model's architecture by adding a fourth hidden layer of 200 neurons
 - `R2` = 0.9071932068691727 
 - `Adjusted R2` = 0.9071784240094832
 
-![Model Loss with added hidden layer](images/model_loss_ma_only_5 layersNOlrschedule.png "Model Loss with added hidden layer")
+![Model Loss with added hidden layer](images/model_loss_ma_only_5layersNOlrschedule.png "Model Loss with added hidden layer")
 
 Adding the 4th hidden layer had an impact, further improving R2 and decreasing the error metrics.
 
@@ -94,7 +94,7 @@ Implemented a learning rate scheduler that started with a higher learning rate o
 
 Each of the modifications had imporved performance with the addition of the Learning Rate scheduler seemingly causing the biggest jump in performance and the smoothest curve with the a final R2 of .94. A good stopping point. A larger dataset and more features could definitely improve the performance of this model.
 
-### Colab Notebook with preliminary investigations
+## Colab Notebook with preliminary investigations
 [Colab Notebook with final model, parameters and output](Colab_Real_Estate_Price_Prediction_final.ipynb "Colab Notebook with final model and parameters")
 
 

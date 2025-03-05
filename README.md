@@ -13,6 +13,9 @@ Original dataset: `https://www.kaggle.com/datasets/ahmedshahriarsakib/usa-real-e
 
 MA only data: `realtor_ma_only.csv`
 
+## Colab Notebook with preliminary investigations
+[Colab Notebook with final model, parameters and output](Colab_Real_Estate_Price_Prediction_final.ipynb "Colab Notebook with final model and parameters")
+
 ## Project Structure
 The project is divided into the following modules:
 
@@ -93,9 +96,6 @@ Implemented a learning rate scheduler that started with a higher learning rate o
 ### Conclusion
 
 Each of the modifications had imporved performance with the addition of the Learning Rate scheduler seemingly causing the biggest jump in performance and the smoothest curve with the a final R2 of .94. A good stopping point. A larger dataset and more features could definitely improve the performance of this model.
-
-## Colab Notebook with preliminary investigations
-[Colab Notebook with final model, parameters and output](Colab_Real_Estate_Price_Prediction_final.ipynb "Colab Notebook with final model and parameters")
 
 
 # Setup Instructions
